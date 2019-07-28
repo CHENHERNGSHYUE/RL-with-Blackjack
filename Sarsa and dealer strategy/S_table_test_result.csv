@@ -1,0 +1,11 @@
+Round,Playing times,Result,Accumulating_winning_rate
+1,10,fail,0.0
+2,41,fail,0.0
+3,60,fail,0.0
+4,150,fail,0.0
+5,26,fail,0.0
+6,39,fail,0.0
+7,29,fail,0.0
+8,26,win,0.125
+9,27,win,0.2222222222222222
+10,32,fail,0.2

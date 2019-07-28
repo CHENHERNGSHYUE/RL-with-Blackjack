@@ -10,7 +10,7 @@ import pandas as pd
 
 class QLtable:
     
-    def __init__(self, actions, learning_rate=0.5, reward_decay=0.9, e_greedy=0.99):
+    def __init__(self, actions, learning_rate=0.05, reward_decay=0.999, e_greedy=0.9):
         self.actions = actions
         self.learning_rate = learning_rate # alpha
         self.reward_decay = reward_decay # gamma
@@ -19,7 +19,7 @@ class QLtable:
         self.q_table = pd.DataFrame(columns=self.actions, dtype=np.float64)
 
     def choose_action(self, observation):
-        self.q_table.to_csv(r'D:\Computer Science\Semester 3\Project\code\Q_learning and dealer strategy\export_dataframe.csv', header=True)
+        self.q_table.to_csv(r'D:\Computer Science\Semester 3\Project\code\Q_learning and dealer strategy\export_qtable.csv', header=True)
         self.check_state_is_existed(observation) #check state is existed or not
         
         if np.random.uniform() < self.e_greedy:#uniform is the same as random for float number, while randit is for int number
